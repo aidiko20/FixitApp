@@ -19,4 +19,9 @@ export default makeStyles((theme) => ({
       buttonSubmit: {
         marginBottom: 10,
       },
+
+      fileInput: {
+        width: '97%',
+        margin: '10px 0',
+      },
 }))
