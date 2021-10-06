@@ -16,12 +16,18 @@ function Post({ post, setCurrentId }) {
     const dispatch = useDispatch();
 
     return (
-        <Card>
+        <Card className={classes.card}>
             <CardMedia className={classes.media} image={post.selectedFile} title={post.title} />
-            <Typography variant="h6" color="textPrimary">{post.title}</Typography>
-            <CardContent varaint="body2" color="textSecondary" component="p">{post.description}</CardContent>
+            <div className={classes.overlay}>
+            <Typography variant="body1">{post.title}</Typography>
+            </div>
+            <CardContent>
+                <Typography varaint="body2" color="textSecondary" component="p">{post.description}</Typography>
+            </CardContent>
+            <div className={classes.details}>
             <Typography variant="body2" color="textSecondary"><RoomOutlinedIcon fontSize="small"/>{post.location}</Typography>
             <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
+            </div>
             <CardActions>
             <Button size="small" color="secondary" fontSize="small" onClick={() => dispatch(deletePost(post._id))}><DeleteIcon fontSize="small" />Delete</Button>
         <Button style={{ color: 'black' }} size="small" onClick={() => setCurrentId(post._id)}><MoreHorizIcon fontSize="medium" /></Button>
