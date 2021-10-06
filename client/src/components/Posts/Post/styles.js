@@ -44,8 +44,10 @@ export default makeStyles((theme) => ({
       },
       details: {
         display: 'flex',
+        flexDirection: 'row',
         justifyContent: 'space-between',
-        margin: '20px',
+        margin: '5px'
+    
       },
       title: {
         padding: '0 16px',

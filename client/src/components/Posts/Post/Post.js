@@ -25,8 +25,8 @@ function Post({ post, setCurrentId }) {
                 <Typography varaint="body2" color="textSecondary" component="p">{post.description}</Typography>
             </CardContent>
             <div className={classes.details}>
-            <Typography variant="body2" color="textSecondary"><RoomOutlinedIcon fontSize="small"/>{post.location}</Typography>
-            <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
+            <Typography variant="subtitle2" color="textSecondary"><RoomOutlinedIcon fontSize="small"/>{post.location}</Typography>
+            <Typography variant="subtitle2">Posted: {moment(post.createdAt).fromNow()}</Typography>
             </div>
             <CardActions>
             <Button size="small" color="secondary" fontSize="small" onClick={() => dispatch(deletePost(post._id))}><DeleteIcon fontSize="small" />Delete</Button>
